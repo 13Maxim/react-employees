@@ -22,17 +22,45 @@ body {
 }
 
 .btn {
-  padding: 5px 20px;
+  padding: 10px 30px;
 
   border-radius: 5px;
   border: none;
   background-color: $blue;
   color: #fff;
+  font-size: 18px;
   transition: .2s;
   cursor: pointer;
 
   &:hover {
     background-color: $light-blue;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    min-width: 250px;
+    height: 40px;
+    padding: 10px 7px;
+    margin: 10px 0;
+
+    border: none;
+    border-bottom: 1px solid $dark-gray;
+    border-radius: 0;
+    outline: none;
+    font-size: 16px;
+
+    &::placeholder {
+      color: $dark-gray;
+      font-size: 16px;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $blue;
+    }
   }
 }
 
@@ -49,26 +77,33 @@ body {
     width: 100%;
   }
 
-  &__logo {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
+  .logo {
+    &__link {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
 
   .menu {
     display: flex;
 
-    color: #fff;
     list-style: none;
 
     &__item {
-      cursor: pointer;
-      transition: .2s;
-
       &:not(:first-child) {
         margin-left: 10px;
       }
+    }
 
+    &__link {
+      cursor: pointer;
+      transition: .2s;
+      color: #fff;
+      text-decoration: none;
+
+      &--active,
       &:hover {
         color: $gray;
       }
@@ -78,23 +113,6 @@ body {
 
 .main {
   padding-top: 30px;
-
-  &__title {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.employees {
-  max-width: 800px;
-  margin: 20px auto;
-  
-  &__no-employees {
-    width: 100%;
-    text-align: center;
-    color: $blue;
-    font-size: 25px;
-  }
 }
 
 .employee-card {
@@ -105,9 +123,43 @@ body {
   margin: 10px 0;
 
   border: 1px solid $dark-gray;
+  border-radius: 10px;
 
   .employee-data {
     list-style: none;
+  }
+}
+
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.employees {
+  &__no-employees {
+    width: 100%;
+    text-align: center;
+    color: $blue;
+    font-size: 25px;
+  }
+}
+
+.new-employee {
+
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__submit {
+    max-width: 150px;
   }
 }
 

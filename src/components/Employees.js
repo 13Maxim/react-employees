@@ -1,8 +1,10 @@
 import EmployeeCard from "./EmployeeCard";
+import React from "react";
 
-function EmployeesList(props) {
+function Employees(props) {
   return (
-    <div className="employees">
+    <section className="employees section">
+      <h2 className="section__title">Employees</h2>
       {
         props.employees.length
           ? <ul className="employees__list">
@@ -10,8 +12,8 @@ function EmployeesList(props) {
             </ul>
           : <p className="employees__no-employees"><strong>No employees yet</strong></p>
       }
-    </div>
+    </section>
   )
 }
 
-export default EmployeesList
+export default Employees
