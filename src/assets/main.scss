@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$dark-blue: #25274d;
+$blue: #29648a;
+$light-blue: #2e9cca;
+$dark-gray: #464866;
+$gray: #aaabb8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 5px 20px;
+
+  border-radius: 5px;
+  border: none;
+  background-color: $blue;
+  color: #fff;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+.header {
+  display: flex;
+  height: 75px;
+
+  background-color: #05386b;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+
+    color: #fff;
+    list-style: none;
+
+    &__item {
+      cursor: pointer;
+      transition: .2s;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 30px;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.employees {
+  max-width: 800px;
+  margin: 20px auto;
+  
+  &__no-employees {
+    width: 100%;
+    text-align: center;
+    color: $blue;
+    font-size: 25px;
+  }
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin: 10px 0;
+
+  border: 1px solid $dark-gray;
+
+  .employee-data {
+    list-style: none;
+  }
+}
+
+
