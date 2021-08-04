@@ -65,9 +65,7 @@ body {
 }
 
 .header {
-  display: flex;
   height: 75px;
-
   background-color: #05386b;
 
   &__container {
@@ -88,7 +86,6 @@ body {
 
   .menu {
     display: flex;
-
     list-style: none;
 
     &__item {
@@ -147,10 +144,6 @@ body {
     color: $blue;
     font-size: 25px;
   }
-}
-
-.new-employee {
-
 }
 
 .employee-form {
