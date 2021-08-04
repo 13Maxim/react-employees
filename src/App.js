@@ -9,13 +9,14 @@ import Header from "./components/main/Header";
 import Employees from "./components/Employees";
 import Modal from "./components/utils/modal/Modal";
 import NewEmployee from "./components/NewEmployee";
+import {SearchEmployee} from "./components/SearchEmployee";
 
 function App() {
 
   const [employees, setEmployees] = useState([
-    {name: 'Max', position: 'Front-end engineer', salary: 1000, id: 1},
-    {name: 'Katya', position: 'Project Manager', salary: 2000, id: 2},
-    {name: 'Ivan', position: 'Team-Lead', salary: 5000, id: 3},
+    {name: 'Peter', position: 'Front-end engineer', salary: 1000, id: 1},
+    {name: 'Mary', position: 'Project Manager', salary: 2000, id: 2},
+    {name: 'Bob', position: 'Team-Lead', salary: 5000, id: 3},
   ])
 
   const [showDeleteModal, setDeleteModal] = useState(false)
@@ -52,6 +53,9 @@ function App() {
               <Switch>
                 <Route path="/new">
                   <NewEmployee onSubmit={hireEmployee} />
+                </Route>
+                <Route path="/search">
+                  <SearchEmployee />
                 </Route>
                 <Route path="/">
                   <Employees employees={employees} />
