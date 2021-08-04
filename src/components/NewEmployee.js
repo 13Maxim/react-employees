@@ -39,13 +39,12 @@ function NewEmployee(props) {
           label="Employee's position"
           value={position}
           setValue={setPosition}
-          placeholder="Please, enter a position"
+          placeholder="Please, enter position"
         />
         <FormField
           label="Employee's salary"
           value={salary}
           setValue={setSalary}
-          placeholder="Please, enter a salary"
           type="number"
         />
         <button type="submit" className="btn employee-form__submit">
